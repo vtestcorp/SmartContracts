@@ -1,0 +1,27 @@
+{    
+    "test_id" : "PARTY_TC006_Verify_addition_of_document_to_external_party",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY006CustomerID{{random}}",
+			"party_name" : "PARTY006Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,			
+			"party_documents" : [
+				{
+					"party_document_type" : "Deal Agreement",
+					"party_document_nature" : "Original",
+					"party_document_fromdate" : "{{today}}",
+					"party_document_tilldate" : "{{oneMonthFromToday}}",
+					"party_document_description" : "Sample Description",
+					"party_document_upload_url" : "src/test/resources/testdata/input.pdf"
+				}
+			],
+			"party_submit" : false
+		}
+	]
+}

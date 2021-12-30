@@ -1,0 +1,83 @@
+{    
+    "test_id" : "PARTY_TC041_Verify_duplication_of_ecommerce_party",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY041CustomerID{{random}}",
+			"party_name" : "PARTY041Name{{random}}",
+			"party_neutral" : false,		
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",		
+			"party_submit" : true
+		},
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY041CustomerID2{{random}}",
+			"party_name" : "PARTY041Name2{{random}}",
+			"party_neutral" : false,	
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",			
+			"party_submit" : true
+		}
+	],
+	"deals":[
+		{
+			"name" : "PARTYDEAL041Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : true,
+					"party_name" : "PARTY041Name{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : true,
+					"party_ecommerce_participant_id" : "PARTY041EcommerceParticipant{{random}}",
+					"party_ecommerce_status" : "Active",
+					"party_ecommerce_valid_from" : "{{today}}",
+					"party_ecommerce_valid_until" : "{{oneYearFromToday}}",
+					"party_ecommerce_kyc_complete" : true
+				},
+				{
+					"party_type" : "External",
+					"party_live" : true,
+					"party_name" : "PARTY041Name2{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : true,
+					"party_ecommerce_participant_id" : "PARTY041EcommerceParticipant{{random}}",
+					"party_ecommerce_status" : "Active",
+					"party_ecommerce_valid_from" : "{{today}}",
+					"party_ecommerce_valid_until" : "{{oneYearFromToday}}",
+					"party_ecommerce_kyc_complete" : true
+				}
+			],		
+			"deal_submit" : false,
+			"deal_required_messages" : [
+				"Required Participant Id",
+				"ParticipantId already exists"
+			]
+		}
+	]
+}

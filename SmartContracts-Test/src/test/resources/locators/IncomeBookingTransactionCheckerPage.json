@@ -1,0 +1,15 @@
+{
+	"page" : "IncomeBookingTransactionCheckerPage",
+	"locators" : [
+		{
+			"input-FilterText" : "//input[@ref='eFloatingFilterText']",
+			"column-IncomeBookingInstructionName" : "//div[@col-id='source.instructionName']",
+			"column-IncomeBookingActions" : "//div[@col-id='0']",
+			"button-IncomeBookingBasicNext" : "ic-adhoc-fee-incomebookingBasic-next-v1 ",
+			"tab-IncomeBookingSummary" : "//div[@title='Summary']",
+			"input-AddComments" : "//textarea[@placeholder='Add your comments here ...']",
+			"button-SendForReview" : "//button[contains(text(), 'Send for review')]",
+			"button-Approve" : "//button[contains(text(), 'Approve')]"
+		}
+	]
+}

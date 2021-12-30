@@ -1,0 +1,49 @@
+{    
+    "test_id" : "PARTY_TC010_Verify_edit_of_external_party_document",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY010CustomerID{{random}}",
+			"party_name" : "PARTY010Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,
+			"party_documents" : [
+				{
+					"party_document_type" : "Deal Agreement",
+					"party_document_nature" : "Original",
+					"party_document_fromdate" : "{{today}}",
+					"party_document_tilldate" : "{{oneMonthFromToday}}",
+					"party_document_description" : "Sample Description",
+					"party_document_upload_url" : "src/test/resources/testdata/input.pdf"
+				}
+			],		
+			"party_submit" : true
+		}
+	],
+	"edit_parties" : [
+		{
+			"party_name" : "PARTY010Name{{random}}",
+			"party_documents" : [
+				{
+					"party_document_action" : "EDIT",
+					"party_document_type" : "Deal Agreement",
+					"party_updated_document": [
+						{
+							"party_document_type" : "Civil Engineer certificate",
+							"party_document_nature" : "Scanned",
+							"party_document_fromdate" : "{{nextDay}}",
+							"party_document_description" : "Sample Description Updated",
+							"party_document_upload_url" : "src/test/resources/testdata/input.pdf"
+						}
+					
+					]
+				}
+			],
+			"party_submit" : false			
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"page" : "DealLifecycleMakerPage",
+ 	"locators" : [ 
+        {	
+        	"input-FilterText" : "//input[@ref='eFloatingFilterText']",         	
+        	"column-DealID" : "//div[@col-id='refId']",
+        	"column-DealName" : "//div[@col-id='name']",
+        	"column-Manage" : "//div[@col-id='manage']",
+        	"select-OperationFilter" : "select-type-basic",
+        	"input-AddComments" : "//textarea[@placeholder='Add your comments here ...']",
+        	"button-SendForReview" : "//button[contains(text(), 'Send for review')]",
+			"button-Approve" : "//button[contains(text(), 'Approve')]",        	
+        	"button-Yes" : "//button[contains(text(), 'Yes')]",     	
+        	"label-TransactionRecordsCount" : "//div[contains(@class, 'records-count')]",
+        	"button-SetPreference" : "//div[contains(text(), 'Set Preference')]",
+        	"checkbox-SelectAll" : 	"//b[contains(text(), 'Select')]",
+        	"list-PreferenceList" : "cdk-drop-list-0",
+        	"label-PreferenceName" : "//div[@cdkdraglockaxis='y']",
+        	"checkbox-Preference" : "undefined",
+        	"button-PreferenceApply" : "//button[contains(text(), 'Apply')]",
+        	"column-DealLifecycle":"//label[text()=' DEAL LIFECYCLE ']",
+        	"colum-Checker":"//a[text()=' Lifecycle  Checker']",
+        	"Ui-Icon-Submit":"(//i[@class='ui-icon icon-submit'])[1]",
+        	"textarea-Comments":"//textarea[@placeholder='Add your comments here ...']",
+        	"colum-Icon-Doc-submit":"(//i[@class='ui-icon ic ic-doc_submit_icon'])[1]"
+        	
+        }
+	]
+}

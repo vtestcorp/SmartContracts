@@ -1,0 +1,42 @@
+{
+    "test_id" : "PARTY_TC019_Verify_delete_of_external_party_draft_account",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY019CustomerID{{random}}",
+			"party_name" : "PARTY019Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,
+			"party_accounts" : [
+				{
+					"party_account_payment_system" : "BT",
+					"party_account_beneficiary_BIC" : "PARTY019BIC",
+					"party_account_beneficiary_name" : "PARTY019BeneficiaryName{{random}}",
+					"party_account_beneficiary_address" : "PARTY019BeneficiaryAddress",
+					"party_account_beneficiary_country" : "IND",
+					"party_account_beneficiary_currency" : "INR",
+					"party_account_beneficiary_account" : "PARTY019BeneficiaryAccount{{random}}",
+					"party_account_description" : "Sample Description"
+					  
+				}
+			],			
+			"party_submit" : true
+		}
+	],
+	"edit_parties" : [
+		{
+			"party_name" : "PARTY019Name{{random}}",
+			"party_accounts" : [
+				{
+					"party_account_action" : "DELETE",
+					"party_account_beneficiary_account" : "PARTY019BeneficiaryAccount{{random}}"										  
+				}				
+			],
+			"party_submit" : false			
+		}
+	]
+}

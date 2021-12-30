@@ -1,0 +1,25 @@
+{
+"page" : "PartyCheckerPage",
+    "locators" : [ 
+        {	
+        	"input-FilterText" : "//input[@ref='eFloatingFilterText']",
+        	"column-PartyName" : "//div[@col-id='name']",
+        	"column-PartyManage" : "//div[@col-id='1']",
+        	"checkbox-PartyType" : "sw-config-party-partyBasicDetails-internal-v1",
+        	"checkbox-PartyNeutral" : "undefined",
+			"input-PartyCustomerID" : "txt-config-party-partyBasicDetails-customerId-v1",
+			"input-PartyName" :"txt-config-party-partyBasicDetails-name-v1",
+			"button-PartyNext" : "btn-config-party-partyBasicDetails-next-v1",
+			"tab-PartyTabSet" : "btn-generic-tabset-selectTab-v1",
+			"table-Party" : "btn-generic-grid-row-v1",
+			"label-Title" : "swal2-title",
+			"button-OK" : "//button[contains(text(), 'Ok')]",
+			"button-Yes" : "//button[contains(text(), 'Yes')]",
+			"input-AddComments" : "//textarea[@placeholder='Add your comments here ...']",
+			"button-SendForReview" : "//button[contains(text(), 'Send for review')]",
+			"button-Approve" : "//button[contains(text(), 'Approve')]"
+			
+            
+        }
+    ]
+}

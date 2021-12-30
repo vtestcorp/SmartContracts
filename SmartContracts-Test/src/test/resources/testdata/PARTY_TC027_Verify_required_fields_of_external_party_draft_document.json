@@ -1,0 +1,26 @@
+{   
+    "test_id" : "PARTY_TC027_Verify_required_fields_of_external_party_draft_document",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY027CustomerID{{random}}",
+			"party_name" : "PARTY027Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,
+			"party_documents" : [
+				{
+					
+				}
+			],		
+			"party_required_messages" : [
+				"Document type is required",
+				"Document nature is required"
+			],
+			"party_submit" : false
+		}
+	]
+}

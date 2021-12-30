@@ -1,0 +1,60 @@
+{    
+    "test_id" : "ACCOUNT_TC009_Verify_addition_of_same_account_twice_to_new_deal", 
+    "accounts": [
+        {
+            "account_number": "ACCOUNT009Account{{random}}",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "ACCOUNT009CustomerID{{random}}",
+            "mothers_maiden_name" : "ACCOUNT009MotherMaidenName{{random}}",
+            "name" : "ACCOUNT009Name{{random}}",
+            "status": "ACTIVE",
+            "account_identifier_key" : "physical"            
+        }
+    ],   
+	"deals":[
+		{
+			"name" : "ACCOUNTDEAL009Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"accounts" : [				
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT009Account{{random}}",
+					"account_balance_check" : true	  
+				},
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT009Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],		
+			"deal_submit" : true,
+			"deal_response_messages" :[
+				"This account is already part of this deal."
+			]			
+		}				
+	]
+}

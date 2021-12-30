@@ -1,0 +1,85 @@
+{    
+    "test_id" : "PARTY_TC048_Verify_edit_of_external_party_contact_in_deal_draft",    
+	"deals":[
+		{
+			"name" : "PARTYDEAL048Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : false,
+					"party_name" : "PARTY048Name{{random}}",
+					"party_customer_id" : "PARTY048CustomerId{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false,
+					"party_contacts" : [
+						{
+							"party_contact_name" : "PARTY048Contact{{random}}",
+							"party_contact_authorised_signatory" : true,
+							"party_contact_subinstruction_notification" : true,
+							"party_contact_email" : "party048contact{{random}}@gmail.com",
+							"party_contact_designation" : "CEO",
+							"party_contact_work_phone" : "1234567890",
+							"party_contact_mobile_phone" : "1234567890",
+							"party_contact_street" : "abc street",
+							"party_contact_town" : "abc town",
+							"party_contact_pin" : "abc 2134",
+							"party_contact_state" : "abc state",
+							"party_contact_country" : "abc country"
+						}
+					]
+				}
+				
+			],		
+			"deal_submit" : false
+		}			
+	],
+	"edit_deals":[
+		{
+			"name" : "PARTYDEAL048Name{{random}}",			
+			"parties" : [
+				{
+					"party_action" : "EDIT",
+					"party_name" : "PARTY048Name{{random}}",
+					"party_contacts" : [
+						{	
+
+							"party_contact_action" : "EDIT",
+							"party_contact_name" : "PARTY048Contact{{random}}",
+							"party_updated_contact" : [
+								{
+									"party_contact_name" : "PARTY048ContactUpdated{{random}}",
+									"party_contact_authorised_signatory" : false,
+									"party_contact_subinstruction_notification" : false,
+									"party_contact_email" : "party048contactupdated{{random}}@gmail.com",
+									"party_contact_designation" : "CTO",
+									"party_contact_work_phone" : "0987654321",
+									"party_contact_mobile_phone" : "0987654321",
+									"party_contact_street" : "xyz street",
+									"party_contact_town" : "xyz town",
+									"party_contact_pin" : "xyz 2134",
+									"party_contact_state" : "xyz state",
+									"party_contact_country" : "xyz country"
+								}						
+							]					
+						}										
+					]
+				}
+			],
+			"deal_submit" : false
+		}	
+	]
+}

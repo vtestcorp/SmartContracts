@@ -1,0 +1,69 @@
+{
+    
+	"test_id" : "TC003_Verify_creation_of_transaction",    
+	"transactions":[
+		{
+			"deal_name" : "AutomationDeal",
+			"deal_id" : "REF1620641477891",
+			"type" : "adhoc",
+			"sub_type" : "payment",
+			"transaction_name" : "AdhocPayment",
+			"transaction_purpose": "Payment",
+			"transaction_source_account" : "73838900006 - IND - INR",
+			"transaction_balance_consideration" : "Ledger Balance",
+			"transaction_execute_later" : false,
+			"transaction_execute_on" : "02-Jan-2022",
+			"transaction_remarks" : "This is a sample transaction remark",
+			"transaction_scheduled_at" : "BOD",
+			"transaction_holiday_action" : "Previous business day",
+			"transaction_split" : false,
+			"transaction_specify_amount_as" : "Fixed amount",
+			"transaction_value" : "20",
+			"transaction_pending_deferral" : false,
+			"transaction_deferral_closure_date" : "02-Jan-2022",
+			"transaction_deferral_approved_by" : "Sarangi",
+			"transaction_deferral_notes" : "This is a sample transaction deferral note",
+			"transaction_pending_hard_copy" : false,
+			"transaction_pending_hard_copy_comments" : "This is a sample transaction pending hard copy comment",
+			"transaction_amount_configure" : false,
+			"transaction_destination_configure" : false,
+			"transaction_sub_instructions" : [
+				{
+					"sub_instruction_budget" : "BudgetGroup",
+					"sub_instruction_budget_purpose" : "Purpose1",
+					"sub_instruction_instrument" : "BT",
+					"sub_instruction_debit_account_BIC_code" : "MYS",
+					"sub_instruction_transaction_charges_beared_by" : "CRED",
+					"sub_instruction_amount" : "1.00",
+					"sub_instruction_currency" : "INR",
+					"sub_instruction_value_date" : "02-Jan-2022",
+					"sub_instruction_beneficiary_name" : "Danush",
+					"sub_instruction_beneficiary_address" : "Address1"
+				},
+				{
+					"sub_instruction_budget" : "BudgetGroup",
+					"sub_instruction_budget_purpose" : "Purpose1",
+					"sub_instruction_instrument" : "BT",
+					"sub_instruction_debit_account_BIC_code" : "MYS",
+					"sub_instruction_transaction_charges_beared_by" : "CRED",
+					"sub_instruction_amount" : "10.00",
+					"sub_instruction_currency" : "INR",
+					"sub_instruction_value_date" : "02-Jan-2022",
+					"sub_instruction_beneficiary_name" : "Danush",
+					"sub_instruction_beneficiary_address" : "Address1"
+				}
+			],
+			"transaction_documents" : [
+				{
+					"document_type" : "Invoice",
+					"file_type" : "Attachment",
+					"attachment_upload_url" : "src/test/resources/testdata/input.pdf"
+				}
+			]
+			
+		}		
+	],
+	"deals" : [
+		"REF1620641477891"
+	]
+}

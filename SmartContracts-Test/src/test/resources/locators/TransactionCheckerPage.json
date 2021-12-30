@@ -1,0 +1,28 @@
+{
+	"page" : "TransactionCheckerPage",
+ 	"locators" : [ 
+        {
+        	"button-SetPreference" : "//div[contains(text(), 'Set Preference')]",
+        	"checkbox-SelectAll" : 	"//b[contains(text(), 'Select')]",
+        	"list-PreferenceList" : "cdk-drop-list-0",
+        	"label-PreferenceName" : "//div[@cdkdraglockaxis='y']",
+        	"checkbox-Preference" : "undefined",
+        	"button-PreferenceApply" : "//button[contains(text(), 'Apply')]",
+        	"input-FilerDealID" : "//div[contains(@ref, 'eFloatingFilterBody') and contains(@aria-colindex, '3')]",
+        	"input-FilerFileName" : "//div[contains(@ref, 'eFloatingFilterBody') and contains(@aria-colindex, '5')]",
+        	"checkbox-TransactionCheckbox" : "undefined",
+        	"table-TransactionBody" : "//div[@ref='eBodyViewport']",
+        	"button-TransactionDealID" : "//div[@col-id='refId']",
+        	"label-TransactionNoResults" : "//div[@ref='eoverlayWrapper']",
+        	"label-TransactionRecordsCount" : "//div[contains(@class, 'records-count')]",
+        	"label-TransactionManage" : "//div[contains(text(), 'Manage')]",
+        	"input-TransactionNotes" : "txt-deals-accounts-addUpdateAdvice-noteTxt-v1",
+        	"button-AddTransactionNote" : "btn-deals-accounts-addUpdateAdvice-ok-v1",        	  
+        	"button-TransactionSendForReview" : "//button[contains(text(), 'Send for review')]",
+        	"button-TransactionSubmit" : "//button[contains(text(), 'Submit')]",
+        	"button-TransactionSubmitYes" : "//button[contains(text(), 'Yes')]",
+        	"button-TransactionSubmitOK" : "//button[contains(text(), 'OK')]"
+        	
+        }
+	]
+}

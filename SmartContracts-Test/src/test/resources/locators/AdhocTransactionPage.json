@@ -1,0 +1,44 @@
+{
+"page" : "AdhocTransactionPage",
+    "locators" : [ 
+        {
+        "input-TransactionName" : "txt-deals-instruction-fundTransferBasic-name-v1",
+        "select-TransactionPurpose" : "sel-deals-instruction-fundTransferBasic-purpose-v1",
+        "select-TransactionSourceAccount" : "sel-deals-instruction-fundTransferBasic-sourceAccount-v1",
+        "select-TransactionBalanceConsideration" : "sel-deals-instruction-fundTransferBasic-balanceConsideration-v1",
+        "checkbox-TransactionCheckbox" : "undefined",
+		"input-TransactionDatePicker" : "txt-generic-datePicker-input-v1",
+		"input-TransactionRemarks" : "txt-deals-instruction-fundTransferBasic-remarks-v1",
+		"select-TransactionScheduleAt" : "sel-deals-instruction-fundTransferSchedule-scheduleAt-v1",
+		"select-TransactionHolidayAction" : "sel-deals-instruction-fundTransferSchedule-holidayAction-v1",
+		"checkbox-TransactionSplit" : "sw-deals-instruction-fundTransferBasic-split-v1",
+		"select-TransactionSpecifyAmountAs" : "sel-deals-instruction-fundTransferBasic-specifyAmountAs-v1",
+		"input-TransactionValue" : "txt-deals-instruction-fundTransferBasic-value-v1",
+		"input-TransactionDeferralApprovedBy" : "txt-deals-instruction-deferralApprovedBy-value-v1",
+		"input-TransactionDeferralNotes" : "txt-deals-instruction-deferralNotes-value-v1",
+		"button-TransactionBasicNext" : "ic-deals-instruction-fundTransferBasic-next-v1",
+		"select-TransactionInstrument" : "sel-deals-instruction-fundTransferSubInstruction-paymentInstrument-v1",
+		"select-TransactionBudget" : "sel-deals-instruction-fundTransferSubInstruction-budget-v1",
+		"select-TransactionBudgetPurpose" : "sel-deals-instruction-fundTransferSubInstruction-purpose-v1",
+		"input-TransactionDebitAccountBICCode" : "payment-debitAccountBicCode-txt-v1",
+		"select-TransactionChargesBearedBy" : "payment-transactionChargesBearedBy-sel-v1",
+		"input-TransactionAmount" : "payment-amount-txt-v1",
+		"select-TransactionCurrency" : "payment-paymentCurrency-sel-v1",
+		"input-TransactionValueDate" : "txt-generic-datePicker-input-v1",
+		"input-TransactionBeneficiaryName" : "payment-beneficiaryName-txt-v1",
+		"input-TransactionBeneficiaryAddress" : "payment-beneficiaryAddress-txt-v1",
+		"button-AddTransactionSubInstruction" : "btn-deals-instruction-fundTransferSubInstruction-add-v1",
+		"button-TransactionSubInstructionNext" : "ic-deals-instruction-fundTransferSubInstruction-next-v1",
+		"select-TransactionDocument" : "//select[@class='ui-dropdown-select']",
+		"input-TransactionDocumentUpload" : "txt-generic-fileUpload-fileInput-v1",
+		"button-TransactionDocumentProgress" : "//div[@class='ui-progressbar-progress']",
+		"button-AddTransactionDocument" : "//button[contains(text(), 'Add')]",
+		"button-TransactionProceedToSummary" : "ic-deals-instruction-fundTransferSubInstruction-back-v1",
+		"label-TransactionNoError" : "//div[contains(text(), '0 Errors')]",
+		"button-TransactionSubmit" : "//button[contains(text(), 'submit')]",
+		"button-TransactionSubmitYes" : "//button[contains(text(), 'Yes')]",
+		"button-TransactionSubmitOK" : "//button[contains(text(), 'OK')]"
+        
+        }
+	]
+}

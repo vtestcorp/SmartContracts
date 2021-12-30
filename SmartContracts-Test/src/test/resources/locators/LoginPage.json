@@ -1,0 +1,10 @@
+{
+"page" : "LoginPage",
+    "locators" : [ 
+        {
+            "input-Username" : "txt-generic-login-username-v1",
+            "input-Password" : "txt-generic-login-password-v1",
+            "button-SignIn" : "btn-generic-login-submit-v1"
+        }
+    ]
+}

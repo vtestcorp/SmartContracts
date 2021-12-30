@@ -1,0 +1,103 @@
+{    
+    "test_id" : "FEES_TC010_Verify_addition_of_scheduled_fees_without_tax_credit_account_to_new_deal",    
+	"deals":[
+		{
+			"name" : "FEEDEAL010Name{{random}}",
+			"product": "AutomationProduct",
+			"starts_on" : "{{previousDay}}",
+			"ends_on" : "{{nextDay}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : false,
+					"party_name" : "FEEPARTY010Name{{random}}",
+					"party_customer_id" : "FEEPARTY010CustomerId{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false,
+					"party_contacts" : [
+						{
+							"party_contact_name" : "FEEPARTY010Contact{{random}}",
+							"party_contact_authorised_signatory" : true,
+							"party_contact_subinstruction_notification" : true,
+							"party_contact_email" : "feeparty010contact{{random}}@gmail.com",
+							"party_contact_designation" : "CEO",
+							"party_contact_work_phone" : "1234567890",
+							"party_contact_mobile_phone" : "1234567890",
+							"party_contact_street" : "abc street",
+							"party_contact_town" : "abc town",
+							"party_contact_pin" : "abc 2134",
+							"party_contact_state" : "abc state",
+							"party_contact_country" : "abc country"
+						}
+					]
+				}				
+			],
+			"scheduled_fees" : [
+				{
+					"scheduled_fees_type" : "Income Booking",
+					"scheduled_fee_instruction_name" : "FEEIncomeBooking010Name{{random}}",
+					"scheduled_fee_currency" : "INR",
+					"scheduled_fee_upfront" : true,
+					"scheduled_fee_upfront_amount" : "100",
+					"fee_mode" : "Invoice Only",
+					"fee_type" : "Recurring",
+					"scheduled_fee_recurring_amount" : "100",
+					"scheduled_fee_transaction_based" : "NA",
+					"scheduled_fee_reference_account" : "NA",
+					"scheduled_fee_eod_balance_percent" : "NA",
+					"scheduled_fee_remarks" : "Sample Remarks",
+					"scheduled_fee_holiday_action" : "Execute on holiday",
+					"scheduled_fee_tax_category" : "NT(18%)",
+					"scheduled_fee_contribute_as" : "Percentage",
+					"scheduled_fee_parties" : [
+						{
+							"party_name" : "FEEPARTY010Name{{random}}",
+							"party_upfront_contribution" : "100",							
+							"party_fee_contribution" : "100",
+							"party_tax_reference_no" : "Party tax reference number",
+							"party_invoice_to" : "FEEPARTY010Invoice{{random}}"
+						}
+					],
+					"scheduled_fee_upfront_execution_date" : "{{today}}",
+					"scheduled_fee_upfront_scheduled_at" : "EOD",
+					"scheduled_fee_start_date" : "{{today}}",
+					"scheduled_fee_end_date" : "{{nextDay}}",
+					"scheduled_fee_invoice_same_as_scheduled_date" : true,
+					"scheduled_fee_invoice_due_date" : "0",
+					"scheduled_fee_due_date" : "1",
+					"scheduled_fee_scheduled_at" : "EOD",
+					"scheduled_fee_frequency" : "Days",					
+					"scheduled_fee_repeat_every" : "1",	
+					"scheduled_fee_credit_account" : "NotificationTestFeeAccount01 - NotificationTestFeeAccount",
+					"scheduled_fee_tax_credit_account" : "NotificationTestTaxAccount1 - NotificationTestTaxAccount",					
+					"scheduled_fee_narration" : "Sample Narration",
+					"scheduled_fee_invoice_contacts" : [
+						"FEEPARTY010Contact{{random}}"						
+					],
+					"scheduled_fee_due_reminder" : true,
+					"scheduled_fee_no_of_days_before_collecting" : "1",
+					"scheduled_fee_overdue_reminder" : true,
+					"scheduled_fee_overdue_reminder_frequency" : "Days",
+					"scheduled_fee_overdue_type" : "Stop after",
+					"scheduled_fee_no_of_reminders" : "1",
+					"scheduled_fee_overdue_reminder_repeat_every" : "1",
+					"scheduled_fee_reminder_contacts" : [
+						"FEEPARTY010Contact{{random}}"
+					]	
+				}
+			],		
+			"deal_submit" : true
+		}			
+	]
+}

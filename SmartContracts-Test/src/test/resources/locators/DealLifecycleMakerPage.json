@@ -1,0 +1,25 @@
+{
+	"page" : "DealLifecycleMakerPage",
+ 	"locators" : [ 
+        {	
+        	"input-FilterText" : "//input[@ref='eFloatingFilterText']",         	
+        	"column-DealID" : "//div[@col-id='refId']",
+        	"column-DealName" : "//div[@col-id='name']",
+        	"column-Manage" : "//div[@col-id='manage']",
+        	"select-OperationFilter" : "select-type-basic",
+        	"button-Submit" : "//button[contains(text(), 'submit')]",
+        	"button-Yes" : "//button[contains(text(), 'Yes')]",     	
+        	"label-TransactionRecordsCount" : "//div[contains(@class, 'records-count')]",
+        	"button-SetPreference" : "//div[contains(text(), 'Set Preference')]",
+        	"checkbox-SelectAll" : 	"//b[contains(text(), 'Select')]",
+        	"list-PreferenceList" : "cdk-drop-list-0",
+        	"label-PreferenceName" : "//div[@cdkdraglockaxis='y']",
+        	"checkbox-Preference" : "undefined",
+        	"button-PreferenceApply" : "//button[contains(text(), 'Apply')]",
+        	"column-DealLifecycle":"//label[text()=' DEAL LIFECYCLE ']",
+        	"column-LifecycleMaker":"//a[text()=' Lifecycle  Maker']",
+        	"column-Icon-Submit":"(//i[@class='ui-icon icon-submit'])[1]",
+        	"colum-Icon-Doc-submit":"(//i[@class='ui-icon ic ic-doc_submit_icon'])[1]"
+        	        }
+	]
+}

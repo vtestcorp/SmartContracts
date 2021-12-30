@@ -1,0 +1,29 @@
+{
+"page" : "ODPLandingPage",
+    "locators" : [ 
+        {
+        "select-CurrentApp" : "//div[contains(@class, 'current-app-name')]",
+        "label-AppName" : "//div[contains(@class, 'app-name')]",
+        "button-AddData" : "addDataBtn",
+        "button-Filter" : "//span[contains(@class, 'fa-filter')]",
+        "input-FilterColumns" : "columns",
+        "button-FilterColumn" : "ngb-typeahead-0-0",
+        "button-FilterSearchForSelectField" : "//strong[contains(text(), 'Select Field')]",
+        "select-FilterSearchFor" : "//select[contains(@class, 'custom-select')]",
+        "input-FilterSearchForInput" : "//input[contains(@class, 'filter-txt')]",
+        "button-FilterApply" : "//button[contains(text(), 'Apply')]",
+        "button-FilterClear" : "//button[contains(text(), 'Clear')]",
+        "input-Search" : "//input[@placeholder = 'Search']",
+        "label-SearchHeader" : "//div[contains(@class, 'data-grid-header')]",
+        "label-HeaderCell" : "//div[contains(@class, 'head-cell')]",    
+        "label-DataBody" : "//div[contains(@class, 'data-grid-body')]",    
+        "label-DataRow" : "//div[contains(@class, 'data-grid-row')]",
+        "label-DataCell" : "//div[contains(@class, 'data-grid-cell')]",
+        "sidemenu-Accounts" : "//div[contains(text(), 'Accounts')]",
+        "sidemenu-Email" : "//div[contains(text(), 'Email')]",
+        "button-Username" : "//div[contains(@class, 'user-name')]",        
+        "button-Logout" : "//span[contains(text(), 'Logout')]",
+        "button-UnsavedChangesYes" : "//button[contains(text(), 'Yes')]"
+        }
+	]
+}

@@ -1,0 +1,13 @@
+
+{
+"page" : "ManageConfigsPage",
+    "locators" : [ 
+        {
+            "card-Product" : "//*[contains(text(), 'Product')]",
+            "card-TaxCategries" : "//div[text()='Tax Category']"
+           
+            
+        }
+    ]
+
+}

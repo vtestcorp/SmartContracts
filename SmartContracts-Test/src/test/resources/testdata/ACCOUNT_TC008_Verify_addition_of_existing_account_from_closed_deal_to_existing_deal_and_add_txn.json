@@ -1,0 +1,152 @@
+{    
+    "test_id" : "ACCOUNT_TC008_Verify_addition_of_existing_account_from_closed_deal_to_existing_deal_and_add_txn", 
+    "accounts": [
+        {
+            "account_number": "ACCOUNT008Account{{random}}",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "ACCOUNT008CustomerID{{random}}",
+            "mothers_maiden_name" : "ACCOUNT008MotherMaidenName{{random}}",
+            "name" : "ACCOUNT008Name{{random}}",
+            "status": "ACTIVE",
+            "account_identifier_key" : "physical"            
+        }
+    ],   
+	"close_deals":[
+		{
+			"name" : "ACCOUNTDEAL008Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",
+			"accounts" : [					
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT008Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],					
+			"deal_submit" : true
+		}					
+	],
+	"deals": [
+		{
+			"name" : "ACCOUNTDEAL008Name2{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",								
+			"deal_submit" : true
+		}
+	],
+	"edit_deals":[
+		{
+			"name" : "ACCOUNTDEAL008Name2{{random}}",			
+			"accounts" : [					
+				{
+					"account_action" : "ADD",
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT008Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],
+			"budget_groups" : [				
+				{
+					"budget_group_action" : "ADD",
+					"budget_group_name" : "ACCOUNT008BudgetGroup{{random}}",
+					"budget_group_source_account" : "ACCOUNT008Account{{random}} - ACCOUNT008Name{{random}} INR IND",
+					"budget_group_fiscal_month" : "{{currentMonth}}",
+					"budget_group_fiscal_year" : "Current Year",
+					"budgets" : [
+						{
+							"budget_type" : "Purpose",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "ACCOUNT008BudgetPurpose{{random}}",
+							"budget_destination" : "ACCOUNT008BudgetDestination{{random}}",
+							"budget_interval" : "Monthly",
+							"budget_duration" : "{{currentMonthAndYear}}",
+							"budget_allocated_amount" : "10000",
+							"budget_starts_on" : "{{startOfMonth}}",
+							"budget_ends_on" : "{{endOfMonth}}"
+						}
+					]					
+				}
+			],
+			"deal_submit" : true
+		}
+	],
+	"transactions":[
+		{
+			"deal_name" : "ACCOUNTDEAL008Name2{{random}}",			
+			"type" : "adhoc",
+			"sub_type" : "payment",
+			"transaction_name" : "ACCOUNTDEAL008Transaction{{random}}",
+			"transaction_purpose": "Payment",
+			"transaction_source_account" : "ACCOUNT008Account{{random}} - ACCOUNT008Name{{random}} INR IND",
+			"transaction_balance_consideration" : "Available Balance",
+			"transaction_execute_later" : false,
+			"transaction_execute_on" : "{{today}}",
+			"transaction_remarks" : "This is a sample transaction remark",
+			"transaction_scheduled_at" : "BOD",
+			"transaction_holiday_action" : "Previous business day",
+			"transaction_split" : false,
+			"transaction_specify_amount_as" : "Fixed amount",
+			"transaction_value" : "10",
+			"transaction_pending_deferral" : false,
+			"transaction_deferral_closure_date" : "{{oneYearFromToday}}",
+			"transaction_deferral_approved_by" : "Approver",
+			"transaction_deferral_notes" : "This is a sample transaction deferral note",
+			"transaction_pending_hard_copy" : false,
+			"transaction_pending_hard_copy_comments" : "This is a sample transaction pending hard copy comment",
+			"transaction_amount_configure" : false,
+			"transaction_destination_configure" : false,
+			"transaction_sub_instructions" : [
+				{
+					"sub_instruction_budget" : "ACCOUNT008BudgetGroup{{random}}",
+					"sub_instruction_budget_purpose" : "ACCOUNT008BudgetPurpose{{random}}",
+					"sub_instruction_instrument" : "BT",
+					"sub_instruction_debit_account_BIC_code" : "MYS",
+					"sub_instruction_transaction_charges_beared_by" : "CRED",
+					"sub_instruction_amount" : "10.00",
+					"sub_instruction_currency" : "INR",
+					"sub_instruction_value_date" : "{{today}}",
+					"sub_instruction_beneficiary_name" : "ACCOUNT008BeneficiaryName{{random}}",
+					"sub_instruction_beneficiary_address" : "ACCOUNT008BeneficiaryAddress{{random}}"
+				}
+			],
+			"transaction_documents" : [
+				{
+					"document_type" : "Invoice",
+					"file_type" : "Attachment",
+					"attachment_upload_url" : "src/test/resources/testdata/input.pdf"
+				}
+			]			
+		}		
+	]
+}

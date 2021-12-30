@@ -1,0 +1,34 @@
+{    
+    "test_id" : "PARTY_TC014_Verify_edit_of_external_party_draft_basic_details",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY014CustomerID{{random}}",
+			"party_name" : "PARTY014Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,			
+			"party_submit" : true
+		}
+	],
+	"edit_parties" : [
+		{
+			"party_name" : "PARTY014Name{{random}}",
+			"party_basic_details" : [
+				{
+					"party_customer_id" : "PARTY014CustomerID{{random}}Updated",
+					"party_name" : "PARTY014Name{{random}}Updated",
+					"party_processing_units" : [				
+						"Bangalore CPU",
+						"Mumbai HO"
+					],
+					"party_remarks" : "Updated Sample Remark"
+				}				
+			],
+			"party_submit" : false			
+		}
+	]
+}
