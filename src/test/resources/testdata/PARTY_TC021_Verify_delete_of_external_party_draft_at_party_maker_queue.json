@@ -1,0 +1,23 @@
+{    
+    "test_id" : "PARTY_TC021_Verify_delete_of_external_party_draft_at_party_maker_queue",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY021CustomerID{{random}}",
+			"party_name" : "PARTY021Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,			
+			"party_submit" : true
+		}
+	],
+	"delete_parties" : [
+    	{
+    		"party_customer_id" : "PARTY021CustomerID{{random}}",
+    		"party_name" : "PARTY021Name{{random}}"			
+    	}				
+	]
+}

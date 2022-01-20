@@ -1,0 +1,11 @@
+{
+"page" : "ODPLoginPage",
+    "locators" : [ 
+        {
+        "input-Username" : "username",
+        "button-UsernameNext" : "//span[contains(text(), 'Next')]",
+        "input-Password" : "password",
+        "button-Login" : "//span[contains(text(), 'Login')]"
+        }
+	]
+}

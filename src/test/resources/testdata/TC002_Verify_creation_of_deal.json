@@ -1,0 +1,397 @@
+{
+    
+	"test_id" : "TC002_Verify_creation_of_deal",    
+	"deals":[
+		{
+			"name" : "Deal{{random}}",
+			"product": "AutomationProduct",
+			"starts_on" : "{{previousDay}}",
+			"ends_on" : "{{nextDay}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",
+			"attributes" : [
+				"AttributeValue1"
+			],
+			"contacts" : [
+				"sarangim",
+				"user102",
+				"user104"
+			],
+			"accounts" : [				
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT001Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : false,
+					"party_customer_id" : "PARTYCustomerID{{random}}",
+					"party_name" : "PARTYName{{random}}",
+					"party_neutral" : false,
+					"party_responsibility" : "Lender",
+					"party_remarks" : "Sample Remark",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false,
+					"party_ecommerce_participant_id" : "PARTYEcommerceParticipant{{random}}",
+					"party_ecommerce_status" : "Active",
+					"party_ecommerce_valid_from" : "{{today}}",
+					"party_ecommerce_valid_until" : "{{nextDay}}",
+					"party_ecommerce_kyc_complete" : true,
+					"party_ecommerce_debit_account" : "ACCOUNT001Account{{random}}",
+					"party_contacts" : [
+						{
+							"party_contact_name" : "PARTYContact{{random}}",
+							"party_contact_authorised_signatory" : true,
+							"party_contact_subinstruction_notification" : true,
+							"party_contact_email" : "partycontact{{random}}@gmail.com",
+							"party_contact_designation" : "CEO",
+							"party_contact_work_phone" : "1234567890",
+							"party_contact_mobile_phone" : "1234567890",
+							"party_contact_street" : "abc street",
+							"party_contact_town" : "abc town",
+							"party_contact_pin" : "abc 2134",
+							"party_contact_state" : "abc state",
+							"party_contact_country" : "abc country"
+						}
+					],
+					"party_accounts" : [
+						{
+							"party_account_payment_system" : "BT",
+							"party_account_beneficiary_BIC" : "PARTYBIC",
+							"party_account_beneficiary_name" : "PARTYBeneficiaryName{{random}}",
+							"party_account_beneficiary_address" : "PARTYBeneficiaryAddress",
+							"party_account_beneficiary_country" : "IND",
+							"party_account_beneficiary_currency" : "INR",
+							"party_account_beneficiary_account" : "PARTYBeneficiaryAccount{{random}}",
+							"party_account_description" : "Sample Description"
+							  
+						}
+					],
+					"party_documents" : [
+						{
+							"party_document_type" : "Deal Agreement",
+							"party_document_nature" : "Original",
+							"party_document_fromdate" : "{{today}}",
+							"party_document_tilldate" : "{{nextDay}}",
+							"party_document_description" : "Sample Description",
+							"party_document_upload_url" : "src/test/resources/testdata/input.pdf"
+						}
+					]
+				}
+			],
+			"scheduled_fees" : [
+				{
+					"scheduled_fees_type" : "Income Booking",
+					"scheduled_fee_instruction_name" : "IncomeBookingName{{random}}",
+					"scheduled_fee_currency" : "INR",
+					"scheduled_fee_upfront" : true,
+					"scheduled_fee_upfront_amount" : "100",
+					"fee_mode" : "Invoice Only",
+					"fee_type" : "Recurring",
+					"scheduled_fee_recurring_amount" : "100",
+					"scheduled_fee_transaction_based" : "NA",
+					"scheduled_fee_reference_account" : "NA",
+					"scheduled_fee_eod_balance_percent" : "NA",
+					"scheduled_fee_remarks" : "Sample Remarks",
+					"scheduled_fee_holiday_action" : "Execute on holiday",
+					"scheduled_fee_tax_category" : "NT(18%)",
+					"scheduled_fee_contribute_as" : "Percentage",
+					"scheduled_fee_parties" : [
+						{
+							"party_name" : "PARTYName{{random}}",
+							"party_upfront_contribution" : "100",
+							"party_fee_debit_account" : "ACCOUNT001Account{{random}}",
+							"party_fee_contribution" : "100",
+							"party_tax_reference_no" : "Party tax reference number",
+							"party_invoice_to" : "PARTYNameInvoice{{random}}"
+						}
+					],
+					"scheduled_fee_upfront_execution_date" : "{{today}}",
+					"scheduled_fee_upfront_scheduled_at" : "EOD",
+					"scheduled_fee_start_date" : "{{today}}",
+					"scheduled_fee_end_date" : "{{nextDay}}",
+					"scheduled_fee_invoice_same_as_scheduled_date" : true,
+					"scheduled_fee_invoice_due_date" : "0",
+					"scheduled_fee_due_date" : "1",
+					"scheduled_fee_scheduled_at" : "EOD",
+					"scheduled_fee_frequency" : "Days",					
+					"scheduled_fee_repeat_every" : "1",
+					"scheduled_fee_credit_account" : "NotificationTestFeeAccount01 - NotificationTestFeeAccount",
+					"scheduled_fee_tax_credit_account" : "NotificationTestTaxAccount1 - NotificationTestTaxAccount",
+					"scheduled_fee_narration" : "Sample Narration",
+					"scheduled_fee_invoice_contacts" : [
+						"PARTYContact{{random}}"						
+					],
+					"scheduled_fee_due_reminder" : true,
+					"scheduled_fee_no_of_days_before_collecting" : "1",
+					"scheduled_fee_overdue_reminder" : true,
+					"scheduled_fee_overdue_reminder_frequency" : "Days",
+					"scheduled_fee_overdue_type" : "Stop after",
+					"scheduled_fee_no_of_reminders" : "1",
+					"scheduled_fee_overdue_reminder_repeat_every" : "1",
+					"scheduled_fee_reminder_contacts" : [
+						"PARTYContact{{random}}"
+					]	
+				}
+			],
+			"entitlements" : [
+				{
+					"entitlement_type" : "Deal",
+					"entitlement_currency" : "INR",
+					"entitlement_ranges_from" : "10",
+					"entitlement_ranges_to" : "1000",
+					"entitlement_initiating_contacts" : [
+						"PARTYContact{{random}}"
+					],
+					"entitlement_authorizing_contacts" : [
+						"PARTYContact{{random}}"
+					]
+				},
+				{
+					"entitlement_type" : "Account",
+					"entitlement_source_account" : "ACCOUNT001Account{{random}} - ACCOUNT001Name{{random}} INR IND",
+					"entitlement_ranges_from" : "10",					
+					"entitlement_ranges_to" : "1000",
+					"entitlement_initiating_contacts" : [
+						"PARTYContact{{random}}"
+					],
+					"entitlement_authorizing_contacts" : [
+						"PARTYContact{{random}}"
+					]
+				}
+			],
+			"budget_groups" : [				
+				{
+					"budget_group_name" : "BudgetGroup{{random}}",
+					"budget_group_source_account" : "ACCOUNT001Account{{random}} - ACCOUNT001Name{{random}} INR IND",
+					"budget_group_fiscal_month" : "Apr",
+					"budget_group_fiscal_year" : "Current Year",
+					"budgets" : [
+						{
+							"budget_type" : "Purpose",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "BudgetPurpose{{random}}",
+							"budget_destination" : "BudgetDestination{{random}}",
+							"budget_interval" : "Monthly",
+							"budget_duration" : "{{currentMonthAndYear}}",
+							"budget_allocated_amount" : "100",
+							"budget_starts_on" : "{{startOfMonth}}",
+							"budget_ends_on" : "{{endOfMonth}}"
+						}
+					]					
+				}
+			],
+			"scheduled_instructions" : [
+				{
+					"scheduled_type" : "Payment-Retention-Surplus",
+					"scheduled_payment_name" : "ScheduledPayment{{random}}",
+					"scheduled_payment_purpose" : "Payment",
+					"scheduled_payment_source_account" : "ACCOUNT001Account{{random}} - ACCOUNT001Name{{random}} INR IND",
+					"scheduled_payment_balance_consideration" : "Available Balance",
+					"scheduled_payment_split" : true,
+					"scheduled_payment_specify_amount_as" : "Fixed amount",
+					"scheduled_payment_value" : "100",
+					"scheduled_payment_partial_payment" : false,
+					"scheduled_payment_sweep_in" : false,
+					"scheduled_payment_repeating" : true,
+					"scheduled_payment_all_sub_instructions" : true,
+					"scheduled_payment_start_date" : "{{today}}",
+					"scheduled_payment_end_date" : "{{nextDay}}",
+					"scheduled_payment_execution_date" : "{{today}}",
+					"scheduled_payment_scheduled_at" : "EOD",
+					"scheduled_payment_holiday_action" : "Next business day",
+					"scheduled_payment_frequency" : "Weekly",
+					"scheduled_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+					],						
+					"scheduled_payment_repeat_every" : "1",
+					"scheduled_payment_sub_type" : "Weekday(s)",
+					"scheduled_payment_week" : "1",
+					"scheduled_payment_days" : [
+							"10",
+							"20"						
+					],
+					"scheduled_instruction_budget" : "BudgetGroup{{random}}",
+					"scheduled_instruction_split_by_percentage" : true,
+					"scheduled_payment_sub_instructions" : [
+							{
+								"sub_instruction_budget_purpose" : "BudgetPurpose{{random}}",
+								"sub_instruction_date" : "{{today}}",
+								"sub_instruction_instrument" : "BT",						
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "100",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "{{today}}",
+								"sub_instruction_beneficiary_name" : "PARTYBeneficiaryName{{random}}",
+								"sub_instruction_beneficiary_address" : "PARTYBeneficiaryAddress"								
+							}
+					],
+					"scheduled_payment_enable_auto_retry" : true,
+					"scheduled_payment_retry_type" : "Custom",
+					"scheduled_payment_retry_days" : "1",
+					"scheduled_payment_retry_hours" : "2",
+					"scheduled_payment_enable_notification_alerts" : true,
+					"scheduled_payment_notification_mode" : "E-Mail",
+					"scheduled_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104",
+							"PARTYContact{{random}}"
+					],
+					"scheduled_retention_purpose" : "Retention",
+					"scheduled_retention_execute" : "A few days prior",
+					"scheduled_retention_noofdays" : "1",
+					"scheduled_retention_include_due_date" : true,
+					"scheduled_retention_sweep_in" : false,
+					"scheduled_surplus_purpose" : "Payment",
+					"scheduled_surplus_partial_payments" : true,
+					"scheduled_surplus_sub_instructions" : [
+						{
+							"sub_instruction_instrument" : "BT",
+							"sub_instruction_budget" : "BudgetGroup{{random}}",
+							"sub_instruction_budget_purpose" : "BudgetPurpose{{random}}",
+							"sub_instruction_debit_account_BIC_code" : "MYS",
+							"sub_instruction_transaction_charges_beared_by" : "CRED",
+							"sub_instruction_amount" : "10",
+							"sub_instruction_currency" : "INR",
+							"sub_instruction_value_date" : "{{today}}",
+							"sub_instruction_beneficiary_name" : "PARTYBeneficiaryName{{random}}",
+							"sub_instruction_beneficiary_address" : "PARTYBeneficiaryAddress"								
+						}
+					]					
+				}
+			],
+			"linked_instructions" : [
+				{
+					"linked_type" : "Payment",
+					"linked_payment_name" : "LinkedPayment{{random}}",
+					"linked_payment_purpose" : "Payment",
+					"linked_payment_source_account" : "ACCOUNT001Account{{random}} - ACCOUNT001Name{{random}} INR IND",
+					"linked_payment_balance_consideration" : "Available Balance",
+					"linked_payment_split" : false,
+					"linked_payment_partial_payment" : false,
+					"linked_payment_amount_configure" : false,
+					"linked_payment_destination_configure" : false,
+					"linked_payment_sweep_in" : false,
+					"linked_payment_repeating" : true,
+					"linked_payment_all_sub_instructions" : true,
+					"linked_payment_start_date" : "{{today}}",
+					"linked_payment_end_date" : "{{nextDay}}",
+					"linked_payment_execution_date" : "{{today}}",
+					"linked_payment_scheduled_at" : "EOD",
+					"linked_payment_holiday_action" : "Next business day",
+					"linked_payment_frequency" : "Weekly",
+					"linked_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+					],						
+					"linked_payment_repeat_every" : "1",
+					"linked_payment_sub_type" : "Weekday(s)",
+					"linked_payment_week" : "1",
+					"linked_payment_days" : [
+							"10",
+							"20"						
+					],
+					"linked_payment_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget" : "BudgetGroup{{random}}",
+								"sub_instruction_budget_purpose" : "BudgetPurpose{{random}}",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "{{today}}",
+								"sub_instruction_beneficiary_name" : "PARTYBeneficiaryName{{random}}",
+								"sub_instruction_beneficiary_address" : "PARTYBeneficiaryAddress"								
+							}
+					],
+					"linked_payment_enable_auto_retry" : true,
+					"linked_payment_retry_type" : "Custom",
+					"linked_payment_retry_days" : "1",
+					"linked_payment_retry_hours" : "2",
+					"linked_payment_enable_notification_alerts" : true,
+					"linked_payment_notification_mode" : "E-Mail",
+					"linked_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104",
+							"PARTYContact{{random}}"
+					]			
+				}
+			],
+			"documents": [
+				{
+					"document_level" : "Mandatory",
+					"document_type" : "Architect certificate",
+					"document_nature" : "Scanned",
+					"document_date" : "09-Mar-2022",
+					"document_deferral" : true,
+					"document_deferral_due_date" : "09-Mar-2022",
+					"document_upload_url" : "src/test/resources/testdata/input.pdf"				
+				}			
+			],
+			"notifications" : [
+				{
+					"notification_type" : "Successful scheduled/linked Transactions",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"sarangim",
+						"PARTYContact{{random}}"
+					]
+				},
+				{
+					"notification_type" : "Failed scheduled/linked transaction",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"user104",
+						"user102"
+					]
+				},
+				{
+					"notification_type" : "Failed adhoc Transactions",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"user104",
+						"user102"
+					]
+				},
+				{
+					"notification_type" : "Successful adhoc Transactions",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"sarangim",
+						"PARTYContact{{random}}"
+					]
+				}
+			],
+			"execution_policies" : {
+				"execution_policy_dependencies" : "FIFO",
+				"execution_policy_verify_balances" : "At an Instruction",
+				"execution_policy_reattempt" : "Forever",
+				"execution_policy_holiday_action" : "Execute on holiday",
+				"execution_policy_inactive_behaviour" : "Ignore Executions",
+				"execution_policy_balance_consideration" : "Available Balance",
+				"execution_policy_reattempt_interval" : "1 Day",
+				"execution_policy_group_payments" : true				
+			},
+			"deal_submit" : true
+
+		}
+	
+	]
+}

@@ -1,0 +1,12 @@
+{
+"page" : "ProductConfigsPage",
+    "locators" : [ 
+        {
+            "button-AddNew" : "//*[contains(text(), 'Add New')]",
+            "tab-AdminChecker" : "//button[contains(text(), 'Admin Checker')]",
+            "table-ProductList" : "//*[@id=\"btn-generic-grid-row-v1\"]",
+            "table-ProductName" : "//*[@id=\"btn-generic-grid-row-v1\"]/tbody/tr/td[1]",
+            "link-editProduct" : "//i[@title='Edit']"
+        }
+    ]
+}

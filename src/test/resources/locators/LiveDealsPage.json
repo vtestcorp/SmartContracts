@@ -1,0 +1,65 @@
+{
+"page" : "LiveDealsPage",
+    "locators" : [ 
+        {
+        "select-DealSearchType" : "sel-generic-searchBar-searchSelect-v1",
+        "input-DealSearchParameter" : "sel-generic-searchBar-searchInput-v1",
+        "button-DealSearch" : "btn-generic-searchBar-search-v1",
+        "button-DealSearchClearFiler" : "btn-generic-searchBar-reset-v1",
+        "list-Deals" : "//div[@class='scrollable-content']",
+        "card-DealTitle" : "//div[@class='deal-title']",
+        "card-DealDetail" : "//div[@class='deal-detail']",
+        "button-DealMenuButton" : "ic-generic-menu-showMenu-v1",
+        "menu-DealPopupMenu" : "popup-menu",
+        "button-Yes" : "//button[contains(text(), 'Yes')]",
+        "button-OK" : "//button[contains(text(), 'OK')]",
+        "button-Ic-Menu":"(//div[@id='ic-generic-menu-showMenu-v1'])[1]",
+        "button-Pause":"//div[text()=' pause ']",
+        "button-resume":"//div[text()=' resume ']",
+        "button-close":"//div[text()=' close ']",
+        "Status-Active":"(//i[@class='active ui-align-left ui-icon'])[1]",
+        "status-close":"(//i[@class='closed ui-align-left ui-icon'])[1]",
+        "input-serach":"//input[@id='sel-generic-searchBar-searchInput-v1']",
+        "button-search":"//button[@id='btn-generic-searchBar-search-v1']",
+        "div-showMenu":"(//div[@id='ic-generic-menu-showMenu-v1'])[1]",
+        "button-open":"//div[text()=' open ']",
+        "menu-party":"//div[@id='tab-deals-partyWizard-v1']",
+        "span-addparty":"//span[@id='ic-parties-partiesList-addParty-v1']",
+        "span-addNewparty":"//div[@id='btn-parties-addLinkParty-addNewParty-v1']",
+        "input-cutId":"//input[@id='sel-parties-partyBasic-customerId-v1']",
+        "input-partyName":"//input[@id='sel-parties-partyBasic-name-v1']",
+        "input-Responsibility":"//input[@id='txt-generic-autocomplete-input-v1']",
+        "input-remark":"//input[@id='sel-parties-partyBasic-remarks-v1']",
+        "input-checkbox":"(//span[@class='ui-pseudo-checkbox'])[2]",
+        "select-Responsibility":"//div[text()='Merchant']",
+        "input-CommissionPlan":"//select[@class='ui-dropdown-select']",
+        "select-CommissionPlan":"//option[@value='Merchant']",
+        "input-commission":"//input[@class='ng-untouched ng-pristine ng-valid ng-star-inserted']",
+        "select-ParticipantId":"//input[@id='party-participant-id']",
+        "select-DebitAccounts":"(//div[@class='ag-cell-wrapper'])[1]",
+        "select-nextButton":"btn-parties-partyBasic-updateParty-v1",
+        "select-Account":"//p[normalize-space()='Accounts']",
+        "add-account":"(//button[normalize-space()='Add Account'])[1]",
+        "select-paymentSystem":"(//input[@id='txt-generic-autocomplete-input-v1'])[2]",
+        "select-accountpayment":"//div[contains(text(),'AK-Pay')]",
+        "input-account-number":"//input[@id='payment-to-txt-v1']",
+        "input-account-name":"//input[@id='payment-name-txt-v1']",
+        "input-addButton":"//button[@id='btn-generic-partyAccounts-addUpdate-v1']",
+        "input-back":"//span[@id='ic-parties-addUpdateParty-back-v1']",
+        "select-platform":"//div[text()='PLATFORM']",
+        "input-DatePicker":"//input[@placeholder='Select date']",
+        "input-pName":"(//input[@class='ng-untouched ng-pristine ng-valid ng-star-inserted'])[1]",
+        "input-pId":"(//input[@class='ng-untouched ng-pristine ng-valid ng-star-inserted'])[2]",
+        "select-date":"//span[@class='date float-left active text-white bg-primary ng-star-inserted']",
+        "button-done":"//button[text()='Done']",
+        "select-payment":"//li[text()='Payment']"
+         	
+       
+        
+        
+        
+        
+        
+        }
+	]
+}

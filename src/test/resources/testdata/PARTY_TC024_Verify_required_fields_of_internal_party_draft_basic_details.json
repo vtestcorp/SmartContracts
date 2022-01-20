@@ -1,0 +1,15 @@
+{    
+    "test_id" : "PARTY_TC024_Verify_required_fields_of_internal_party_draft_basic_details",
+    "parties" : [
+		{
+			"party_type" : "Internal",							
+			"party_submit" : false,
+			"party_required_messages" : [
+				"Customer Id is required",
+				"Party name is required",
+				"Processing Unit is required",
+				"Remarks are required"
+			]
+		}
+	]
+}

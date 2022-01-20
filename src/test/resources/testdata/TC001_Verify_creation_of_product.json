@@ -1,0 +1,602 @@
+{
+    
+	"test_id" : "TC001_Verify_creation_of_product",
+    "products" : [ 
+        {
+			"name" : "AutomationProduct73",
+            "description" : "This is a product created for Test Automation",
+            "transaction_limits" : [
+            	{
+            		"transaction_limit_currency" : "INR",
+            		"transaction_limit_amount" : "100000"
+            	},
+            	{
+            		"transaction_limit_currency" : "SGD",
+            		"transaction_limit_amount" : "25000"
+            	}
+            ],            
+            "select_tabs" : [ 
+                "Accounts", 
+                "Parties", 
+                "Scheduled Fees", 
+                "AuthMatrix", 
+                "Budget", 
+                "Scheduled Instructions", 
+                "Linked Instructions", 
+                "Priority Dependency", 
+                "Documents", 
+                "Notifications"
+            ],
+            "select_scheduled_instructions" : [ 
+                "Payment", 
+                "Retention", 
+                "Payment - Retention", 
+                "Payment - Surplus", 
+                "Retention - Surplus", 
+                "Payment - Retention - Surplus", 
+                "Waterfall", 
+                "Balance Reporting", 
+                "Alerts"
+            ],
+            "select_linked_instructions" : [ 
+                "Payment", 
+                "Waterfall"
+            ],
+            "select_fee_instructions" : [ 
+                "Income Booking"
+            ],
+            "select_notifications" : [ 
+                "Deal Closure Intimation", 
+                "Instruction Ignored", 
+                "Pending Original Requestor Tracker", 
+                "Pending Deferral Approval Document", 
+                "Instruction Reschedule", 
+                "3-2-1 days prior to Scheduled Instruction", 
+                "Scheduled Instruction expiry", 
+                "Failed adhoc Transactions"
+            ],
+            "attributes" : [ 
+                {
+                    "attribute_name" : "Attribute1",
+                    "attribute_description" : "Attribute1 description",
+                    "attribute_type" : "String",
+                    "attribute_mandatory" : true
+                }, 
+                {
+                    "attribute_name" : "Attribute2",
+                    "attribute_description" : "Attribute2 description",
+                    "attribute_type" : "Number",
+                    "attribute_mandatory" : false
+                }
+            ],
+            "purposes" : [ 
+                "Payment", 
+                "Retention", 
+                "Surplus"
+            ],
+            "documents" : [ 
+                {
+                    "document_name" : "Deal Agreement",
+                    "document_type" : "Required"
+                }, 
+                {
+                    "document_name" : "CA certificate",
+                    "document_type" : "Required"
+                }, 
+                {
+                    "document_name" : "Blueprint",
+                    "document_type" : "Optional"
+                }
+            ],
+            "approval_documents" : [ 
+                {
+                    "document_name" : "Receipt",
+                    "document_type" : "Required"
+                }, 
+                {
+                    "document_name" : "Invoice",
+                    "document_type" : "Required"
+                }
+            ],
+            "expiry_documents" : [ 
+                {
+                    "document_name" : "Deal Expiry Documents1",
+                    "document_type" : "Optional"
+                }, 
+                {
+                    "document_name" : "Deal Expiry Documents2",
+                    "document_type" : "Required"
+                }
+            ],
+            "transaction_checklist" : [ 
+            	{
+            		"checklist_name" : "Checklist1",
+            		"checklist_role" : "Transaction Maker",
+            		"checklist_mandatory" : true
+            	},
+                {
+            		"checklist_name" : "Checklist2",
+            		"checklist_role" : "Transaction Checker",
+            		"checklist_mandatory" : false
+            	},
+            	{
+            		"checklist_name" : "Checklist3",
+            		"checklist_role" : "Transaction Verifier",
+            		"checklist_mandatory" : true
+            	}
+            ],
+            "deal_checklist" : [ 
+            	{
+            		"checklist_name" : "Checklist1",
+            		"checklist_role" : "Deal Maker",
+            		"checklist_mandatory" : true
+            	},
+                {
+            		"checklist_name" : "Checklist2",
+            		"checklist_role" : "Deal Checker",
+            		"checklist_mandatory" : false
+            	}
+            ],
+            "introductory_mail" : true
+        }
+    ],
+    
+	"deals":[
+		{
+			"name" : "AutomationDeal",
+			"product": "Test",
+			"starts_on" : "20-Mar-2021",
+			"ends_on" : "20-Mar-2022",
+			"business_segment" : "Commercial development",
+			"processing_units" : [
+				"Select All",
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",
+			"attributes" : [
+				"AttributeValue1"
+			],
+			"contacts" : [
+				"sarangim",
+				"user102",
+				"user104"
+			],
+			"accounts" : [
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "8129216165",
+					"account_balance_check" : true	  
+				}
+			],
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_customer_id" : "P198291",
+					"party_name" : "AutomationParty35",
+					"party_neutral" : true,
+					"party_responsibility" : "Lender",
+					"party_contacts" : [
+						{
+							"party_contact_name" : "smith",
+							"party_contact_authorised_signatory" : true,
+							"party_contact_email" : "smith1@gmail.com"
+						},
+						{
+							"party_contact_name" : "john",
+							"party_contact_authorised_signatory" :false,
+							"party_contact_email" : "john1@gmail.com"
+						}
+					],
+					"party_accounts" : [
+						{
+							"party_account_payment_system" : "BT",
+							"party_account_beneficiary_name" : "Beneficiary1",
+							"party_account_beneficiary_address" : "Beneficiary1Address",
+							"party_account_beneficiary_country" : "IND"	  
+						}
+					],
+					"party_documents" : [
+						{
+							"party_document_type" : "Deal Agreement",
+							"party_document_nature" : "Original",
+							"party_document_fromdate" : "27-Jan-2021",
+							"party_document_tilldate" : "27-Jan-2022"
+						}
+					]
+				},
+				{
+					"party_type" : "External",
+					"party_customer_id" : "P198291",
+					"party_name" : "AutomationParty",
+					"party_neutral" : false,
+					"party_responsibility" : "Lender",
+					"party_contacts" : [
+						{
+							"party_contact_name" : "Dave",
+							"party_contact_authorised_signatory" : true,
+							"party_contact_email" : "dave@gmail.com"
+						},
+						{
+							"party_contact_name" : "Hopes",
+							"party_contact_authorised_signatory" :false,
+							"party_contact_email" : "hopes@gmail.com"
+						}
+					],
+					"party_accounts" : [
+						{
+							"party_account_payment_system" : "BT",
+							"party_account_beneficiary_name" : "Beneficiary1",
+							"party_account_beneficiary_address" : "Beneficiary1Address",
+							"party_account_beneficiary_country" : "IND"	  
+						}
+					],
+					"party_documents" : [
+						{
+							"party_document_type" : "Deal Agreement",
+							"party_document_nature" : "Original",
+							"party_document_fromdate" : "27-Jan-2021",
+							"party_document_tilldate" : "27-Jan-2022"
+						}
+					]
+				}
+			],
+			"budget_groups" : [
+				{
+					"budget_group_name" : "BudgetGroup1",
+					"budget_group_source_account" : "8129216165 - Danush INR IND",
+					"budget_group_fiscal_month" : "Jan",
+					"budgets" : [
+						{
+							"budget_type" : "Purpose",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "Purpose1",
+							"budget_interval" : "Monthly",
+							"budget_duration" : "APR-2021",
+							"budget_allocated_amount" : "100",
+							"budget_starts_on" : "01-APR-2021",
+							"budget_ends_on" : "30-APR-2021"
+						},
+						{
+							"budget_type" : "Purpose",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "Purpose2",
+							"budget_interval" : "Monthly",
+							"budget_duration" : "MAY-2021",
+							"budget_allocated_amount" : "100",
+							"budget_starts_on" : "01-MAY-2021",
+							"budget_ends_on" : "30-MAY-2021"
+						}
+					]
+					
+				},
+				{
+					"budget_group_name" : "BudgetGroup2",
+					"budget_group_source_account" : "8129216165 - Danush INR IND",
+					"budget_group_fiscal_month" : "Jan",
+					"budgets" : [
+						{
+							"budget_type" : "Purpose",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "Purpose1",
+							"budget_interval" : "Monthly",
+							"budget_duration" : "MAY-2021",
+							"budget_allocated_amount" : "100",
+							"budget_starts_on" : "01-MAY-2021",
+							"budget_ends_on" : "30-MAY-2021"
+						}
+					]
+					
+				}
+			],
+			"scheduled_instructions" : [
+				{
+					"scheduled_type" : "Payment-Retention-Surplus",
+					"scheduled_payment_name" : "Payment",
+					"scheduled_payment_purpose" : "Payment",
+					"scheduled_payment_source_account" : "8129216165 - Danush INR IND",
+					"scheduled_payment_balance_consideration" : "Available Balance",
+					"scheduled_payment_split" : false,
+					"scheduled_payment_partial_payment" : false,
+					"scheduled_payment_sweep_in" : false,
+					"scheduled_payment_repeating" : true,
+					"scheduled_payment_all_sub_instructions" : true,
+					"scheduled_payment_start_date" : "10-Apr-2021",
+					"scheduled_payment_end_date" : "10-Apr-2022",
+					"scheduled_payment_execution_date" : "10-Apr-2021",
+					"scheduled_payment_scheduled_at" : "EOD",
+					"scheduled_payment_holiday_action" : "Next business day",
+					"scheduled_payment_frequency" : "Weekly",
+					"scheduled_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+						],						
+					"scheduled_payment_repeat_every" : "1",
+					"scheduled_payment_sub_type" : "Weekday(s)",
+					"scheduled_payment_week" : "1",
+					"scheduled_payment_days" : [
+							"10",
+							"20"						
+						],
+					"scheduled_payment_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						],
+					"scheduled_payment_enable_auto_retry" : true,
+					"scheduled_payment_retry_type" : "Custom",
+					"scheduled_payment_retry_days" : "5",
+					"scheduled_payment_retry_hours" : "10",
+					"scheduled_payment_enable_notification_alerts" : true,
+					"scheduled_payment_notification_mode" : "E-Mail",
+					"scheduled_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104"
+						],
+					"scheduled_retention_purpose" : "Retention",
+					"scheduled_retention_execute" : "A few days prior",
+					"scheduled_retention_noofdays" : "5",
+					"scheduled_retention_include_due_date" : true,
+					"scheduled_retention_sweep_in" : false,
+					"scheduled_surplus_purpose" : "Payment",
+					"scheduled_surplus_partial_payments" : true,
+					"scheduled_surplus_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						]
+					
+					
+				},
+				{
+					"scheduled_type" : "Payment-Retention-Surplus",
+					"scheduled_payment_name" : "Payment",
+					"scheduled_payment_purpose" : "Payment",
+					"scheduled_payment_source_account" : "8129216165 - Danush INR IND",
+					"scheduled_payment_balance_consideration" : "Available Balance",
+					"scheduled_payment_split" : false,
+					"scheduled_payment_partial_payment" : false,
+					"scheduled_payment_sweep_in" : false,
+					"scheduled_payment_repeating" : true,
+					"scheduled_payment_all_sub_instructions" : true,
+					"scheduled_payment_start_date" : "10-Apr-2021",
+					"scheduled_payment_end_date" : "10-Apr-2022",
+					"scheduled_payment_execution_date" : "10-Apr-2021",
+					"scheduled_payment_scheduled_at" : "EOD",
+					"scheduled_payment_holiday_action" : "Next business day",
+					"scheduled_payment_frequency" : "Weekly",
+					"scheduled_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+						],						
+					"scheduled_payment_repeat_every" : "1",
+					"scheduled_payment_sub_type" : "Weekday(s)",
+					"scheduled_payment_week" : "1",
+					"scheduled_payment_days" : [
+							"10",
+							"20"						
+						],
+					"scheduled_payment_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						],
+					"scheduled_payment_enable_auto_retry" : true,
+					"scheduled_payment_retry_type" : "Custom",
+					"scheduled_payment_retry_days" : "5",
+					"scheduled_payment_retry_hours" : "10",
+					"scheduled_payment_enable_notification_alerts" : true,
+					"scheduled_payment_notification_mode" : "E-Mail",
+					"scheduled_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104"
+						],
+					"scheduled_retention_purpose" : "Retention",
+					"scheduled_retention_execute" : "A few days prior",
+					"scheduled_retention_noofdays" : "5",
+					"scheduled_retention_include_due_date" : true,
+					"scheduled_retention_sweep_in" : false,
+					"scheduled_surplus_purpose" : "Payment",
+					"scheduled_surplus_partial_payments" : true,
+					"scheduled_surplus_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						]
+					
+					
+				}
+			],
+			"linked_instructions" : [
+				{
+					"linked_type" : "Payment",
+					"linked_payment_name" : "Payment",
+					"linked_payment_purpose" : "Payment",
+					"linked_payment_source_account" : "8129216165 - Danush INR IND",
+					"linked_payment_balance_consideration" : "Available Balance",
+					"linked_payment_split" : false,
+					"linked_payment_partial_payment" : false,
+					"linked_payment_sweep_in" : false,
+					"linked_payment_repeating" : true,
+					"linked_payment_all_sub_instructions" : true,
+					"linked_payment_start_date" : "10-Apr-2021",
+					"linked_payment_end_date" : "10-Apr-2022",
+					"linked_payment_execution_date" : "10-Apr-2021",
+					"linked_payment_scheduled_at" : "EOD",
+					"linked_payment_holiday_action" : "Next business day",
+					"linked_payment_frequency" : "Weekly",
+					"linked_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+						],						
+					"linked_payment_repeat_every" : "1",
+					"linked_payment_sub_type" : "Weekday(s)",
+					"linked_payment_week" : "1",
+					"linked_payment_days" : [
+							"10",
+							"20"						
+						],
+					"linked_payment_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						],
+					"linked_payment_enable_auto_retry" : true,
+					"linked_payment_retry_type" : "Custom",
+					"linked_payment_retry_days" : "5",
+					"linked_payment_retry_hours" : "10",
+					"linked_payment_enable_notification_alerts" : true,
+					"linked_payment_notification_mode" : "E-Mail",
+					"linked_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104"
+						]			
+					
+				},
+				{
+					"linked_type" : "Payment",
+					"linked_payment_name" : "Payment",
+					"linked_payment_purpose" : "Payment",
+					"linked_payment_source_account" : "8129216165 - Danush INR IND",
+					"linked_payment_balance_consideration" : "Available Balance",
+					"linked_payment_split" : false,
+					"linked_payment_partial_payment" : false,
+					"linked_payment_sweep_in" : false,
+					"linked_payment_repeating" : true,
+					"linked_payment_all_sub_instructions" : true,
+					"linked_payment_start_date" : "10-Apr-2021",
+					"linked_payment_end_date" : "10-Apr-2022",
+					"linked_payment_execution_date" : "10-Apr-2021",
+					"linked_payment_scheduled_at" : "EOD",
+					"linked_payment_holiday_action" : "Next business day",
+					"linked_payment_frequency" : "Weekly",
+					"linked_payment_days_of_week" : [
+							"Monday",
+							"Friday"
+						],						
+					"linked_payment_repeat_every" : "1",
+					"linked_payment_sub_type" : "Weekday(s)",
+					"linked_payment_week" : "1",
+					"linked_payment_days" : [
+							"10",
+							"20"						
+						],
+					"linked_payment_sub_instructions" : [
+							{
+								"sub_instruction_instrument" : "BT",
+								"sub_instruction_budget_purpose" : "Purpose1",
+								"sub_instruction_debit_account_BIC_code" : "MYS",
+								"sub_instruction_transaction_charges_beared_by" : "CRED",
+								"sub_instruction_amount" : "10",
+								"sub_instruction_currency" : "INR",
+								"sub_instruction_value_date" : "10-Apr-2021",
+								"sub_instruction_beneficiary_name" : "Danush",
+								"sub_instruction_beneficiary_address" : "Address1"								
+							}
+						],
+					"linked_payment_enable_auto_retry" : true,
+					"linked_payment_retry_type" : "Custom",
+					"linked_payment_retry_days" : "5",
+					"linked_payment_retry_hours" : "10",
+					"linked_payment_enable_notification_alerts" : true,
+					"linked_payment_notification_mode" : "E-Mail",
+					"linked_payment_notification_contacts" : [
+							"sarangim",
+							"user102",
+							"user104"
+						]			
+					
+				}
+			],
+			"documents": [
+				{
+					"document_level" : "Mandatory",
+					"document_type" : "Architect certificate",
+					"document_nature" : "Scanned",
+					"document_date" : "10-Mar-2021",
+					"document_deferral" : true,
+					"document_deferral_due_date" : "01-Mar-2021",
+					"document_upload_url" : "src/test/resources/testdata/input.pdf"				
+				},
+				{
+					"document_level" : "Mandatory",
+					"document_type" : "Blueprint",
+					"document_nature" : "Original",					
+					"document_deferral" : false,
+					"document_deferral_due_date" : "01-Mar-2021",
+					"document_upload_url" : "src/test/resources/testdata/input.pdf"				
+				}
+			
+			],
+			"notifications" : [
+				{
+					"notification_type" : "Successful scheduled/linked Transactions",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"sarangim",
+						"john"
+					]
+				},
+				{
+					"notification_type" : "3-2-1 days prior to Budget expiry",
+					"notification_mode" : "E-Mail",
+					"notification_contacts" : [
+						"smith",
+						"Dave",
+						"user104",
+						"user102"
+					]
+				}
+			]
+
+}
+	
+	]
+}

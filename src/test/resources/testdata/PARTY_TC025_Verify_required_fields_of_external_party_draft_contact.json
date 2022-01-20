@@ -1,0 +1,26 @@
+{    
+    "test_id" : "PARTY_TC025_Verify_required_fields_of_external_party_draft_contact",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY025CustomerID{{random}}",
+			"party_name" : "PARTY025Name{{random}}",
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",
+			"party_neutral" : false,
+			"party_contacts" : [
+				{
+					
+				}
+			],			
+			"party_required_messages" : [
+				"Contact name is required",
+				"Email is required"
+			],
+			"party_submit" : false
+		}
+	]
+}

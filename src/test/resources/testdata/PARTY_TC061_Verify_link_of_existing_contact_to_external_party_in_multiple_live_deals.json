@@ -1,0 +1,103 @@
+{    
+    "test_id" : "PARTY_TC061_Verify_link_of_existing_contact_to_external_party_in_multiple_live_deals",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY061CustomerID{{random}}",
+			"party_name" : "PARTY061Name{{random}}",
+			"party_neutral" : false,
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",				
+			"party_contacts" : [
+				{
+					"party_contact_name" : "PARTY061Contact{{random}}",
+					"party_contact_email" : "party061contact{{random}}@gmail.com",
+					"party_contact_designation" : "CEO",
+					"party_contact_work_phone" : "1234567890",
+					"party_contact_mobile_phone" : "1234567890",
+					"party_contact_street" : "abc street",
+					"party_contact_town" : "abc town",
+					"party_contact_pin" : "abc 2134",
+					"party_contact_state" : "abc state",
+					"party_contact_country" : "abc country"
+				}
+			],
+			"party_submit" : true
+		}
+	],
+    "live_deals":[
+		{
+			"name" : "PARTYDEAL061Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : true,
+					"party_name" : "PARTY061Name{{random}}",
+					"party_customer_id" : "PARTY061CustomerId{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false,
+					"party_contacts" : [
+						{
+							"party_link_contact" : true,
+							"party_contact_name" : "PARTY061Contact{{random}}"
+						}
+					]
+				}
+				
+			],		
+			"deal_submit" : true
+		},
+		{
+			"name" : "PARTYDEAL061Name2{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",				
+			"parties" : [
+				{
+					"party_type" : "External",
+					"party_live" : true,
+					"party_name" : "PARTY061Name{{random}}",
+					"party_customer_id" : "PARTY061CustomerId{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false,
+					"party_contacts" : [
+						{
+							"party_link_contact" : true,
+							"party_contact_name" : "PARTY061Contact{{random}}"
+						}
+					]
+				}
+				
+			],		
+			"deal_submit" : true
+		}			
+	]
+}

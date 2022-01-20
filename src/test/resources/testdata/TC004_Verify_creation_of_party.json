@@ -1,0 +1,62 @@
+{
+    
+    "test_id" : "TC004_Verify_creation_of_party",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "P198291",
+			"party_name" : "automation",
+			"party_neutral" : true,			
+			"party_contacts" : [
+				{
+					"party_contact_name" : "smith",
+					"party_contact_email" : "smith1@gmail.com",
+					"party_contact_designation" : "CEO",
+					"party_contact_work_phone" : "1234567890",
+					"party_contact_mobile_phone" : "1234567890",
+					"party_contact_street" : "abc street",
+					"party_contact_town" : "abc town",
+					"party_contact_pin" : "abc 2134",
+					"party_contact_state" : "abc state",
+					"party_contact_country" : "abc country"
+				},
+				{
+					"party_contact_name" : "john",					
+					"party_contact_email" : "john1@gmail.com",
+					"party_contact_designation" : "CEO",
+					"party_contact_work_phone" : "1234567890",
+					"party_contact_mobile_phone" : "1234567890",
+					"party_contact_street" : "abc street",
+					"party_contact_town" : "abc town",
+					"party_contact_pin" : "abc 2134",
+					"party_contact_state" : "abc state",
+					"party_contact_country" : "abc country"
+				}
+			],
+			"party_accounts" : [
+				{
+					"party_account_payment_system" : "BT",
+					"party_account_beneficiary_BIC" : "Perf1000",
+					"party_account_beneficiary_name" : "Beneficiary1",
+					"party_account_beneficiary_address" : "Beneficiary1Address",
+					"party_account_beneficiary_country" : "IND",
+					"party_account_beneficiary_currency" : "INR",
+					"party_account_beneficiary_account" : "Perf1000Investor10Account10",
+					"party_account_description" : "Sample Description"
+					  
+				}
+			],
+			"party_documents" : [
+				{
+					"party_document_type" : "Deal Agreement",
+					"party_document_nature" : "Original",
+					"party_document_fromdate" : "01-Mar-2021",
+					"party_document_tilldate" : "09-Mar-2021",
+					"party_document_description" : "Sample Description",
+					"party_document_upload_url" : "src/test/resources/testdata/input.pdf"
+				}
+			],
+			"party_submit" : true
+		}
+	]
+}

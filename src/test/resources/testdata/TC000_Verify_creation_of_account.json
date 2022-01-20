@@ -1,0 +1,24 @@
+{
+    "test_id": "TC000_Verify_creation_of_account",    
+    "accounts": [
+        {
+            "account_number": "Perf3000Deal1Obligor1Account1",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "sample_ucic",
+           	"mothers_maiden_name" : "maiden_name",
+           	"name": "sample_name",
+            "status": "ACTIVE", "account_identifier_key" : "physical",           
+            "short_name": "Perf3000",
+            "obo_flag": "Y"
+        }
+    ]
+}

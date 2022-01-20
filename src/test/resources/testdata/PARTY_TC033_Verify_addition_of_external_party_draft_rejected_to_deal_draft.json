@@ -1,0 +1,53 @@
+{    
+    "test_id" : "PARTY_TC033_Verify_addition_of_external_party_draft_rejected_to_deal_draft",
+    "parties" : [
+		{
+			"party_type" : "External",
+			"party_customer_id" : "PARTY033CustomerID{{random}}",
+			"party_name" : "PARTY033Name{{random}}",
+			"party_neutral" : false,	
+			"party_processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"party_remarks" : "Sample Remark",			
+			"party_submit" : true			
+		}
+	],
+	"deals":[
+		{
+			"name" : "PARTYDEAL033Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",			
+			"deal_submit" : false	
+		}
+	],
+	"edit_deals":[
+		{
+			"name" : "PARTYDEAL033Name{{random}}",			
+			"parties" : [
+				{
+					"party_action" : "ADD",					
+					"party_type" : "External",
+					"party_live" : true,
+					"party_name" : "PARTY033Name{{random}}",
+					"party_neutral" : false,
+					"party_remarks" : "Sample Remark",
+					"party_responsibility" : "Lender",
+					"party_attribute_name" : "Investor",
+					"party_attribute_country" : "IND",
+					"party_ecommerce" : false
+				}
+			],
+			"deal_submit" : false
+		}	
+	]
+}

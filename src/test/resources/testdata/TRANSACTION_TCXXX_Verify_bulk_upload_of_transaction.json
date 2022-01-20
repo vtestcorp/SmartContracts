@@ -1,0 +1,10 @@
+{
+    "test_id": "TRANSACTION_TCXXX_Verify_bulk_upload_of_transaction",
+    "bulk_transactions": [
+        {
+            "bulk_upload_file_url": "src/test/resources/testdata/Transaction_Bulk_Upload_File_6a15f5db-e72f-477b-bfdb-a9a188b39bbc.xlsx",
+            "bulk_upload_file_name": "Transaction_Bulk_Upload_File_6a15f5db-e72f-477b-bfdb-a9a188b39bbc.xlsx",
+            "bulk_upload_file_sheet": "Sheet"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{    
+    "test_id" : "BUDGET_TC003_Verify_addition_of_destination_budget_to_new_deal",   
+    "accounts": [
+        {
+            "account_number": "BUDGET003Account{{random}}",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "BUDGET003CustomerID{{random}}",
+            "mothers_maiden_name" : "BUDGET003MotherMaidenName{{random}}",
+            "name" : "BUDGET003Name{{random}}",
+            "status": "ACTIVE",
+            "account_identifier_key" : "physical"            
+        },
+        {
+            "account_number": "BUDGETDestination{{random}}",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "BUDGETDestinationCustomerID{{random}}",
+            "mothers_maiden_name" : "BUDGETDestinationMotherMaidenName{{random}}",
+            "name" : "BUDGETDestinationName{{random}}",
+            "status": "ACTIVE",
+            "account_identifier_key" : "physical"            
+        }
+    ],
+	"deals":[
+		{
+			"name" : "BUDGETDEAL003Name{{random}}",
+			"product": "AutomationProduct",
+			"starts_on" : "{{previousDay}}",
+			"ends_on" : "{{nextDay}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",
+			"accounts" : [					
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "BUDGET003Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],							
+			"budget_groups" : [				
+				{
+					"budget_group_name" : "BudgetGroup003{{random}}",
+					"budget_group_source_account" : "BUDGET003Account{{random}} - BUDGET003Name{{random}} INR IND",
+					"budget_group_fiscal_month" : "{{currentMonth}}",
+					"budget_group_fiscal_year" : "Current Year",
+					"budgets" : [
+						{
+							"budget_type" : "Destination",
+							"budget_carry_forward" : true,
+							"budget_purpose" : "BudgetPurpose{{random}}",
+							"budget_destination" : "BUDGETDestination{{random}}",
+							"budget_interval" : "Quarterly",
+							"budget_duration" : "Q1-{{nextYear}}",
+							"budget_allocated_amount" : "10000",
+							"budget_starts_on" : "{{startOfMonth}}",
+							"budget_ends_on" : "{{endOfMonth}}"
+						}
+					]					
+				}
+			],	
+			"deal_submit" : true
+		}			
+	]
+}

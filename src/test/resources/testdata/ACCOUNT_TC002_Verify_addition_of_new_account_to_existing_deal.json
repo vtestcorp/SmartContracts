@@ -1,0 +1,82 @@
+{    
+    "test_id" : "ACCOUNT_TC002_Verify_addition_of_new_account_to_existing_deal", 
+    "accounts": [
+        {
+            "account_number": "ACCOUNT005Account{{random}}",
+            "available_balance_amount": "1000000",
+            "available_balance_currency": "INR",
+            "ledger_balance_amount": "10000000",
+            "ledger_balance_currency": "INR",
+            "limit_balance_amount": "1000000",
+            "limit_balance_currency": "INR",
+            "overdraft_balance_amount": "1000000",
+            "overdraft_balance_currency": "INR",
+            "currency": "INR",
+            "country": "IND",
+            "ucic" : "ACCOUNT005CustomerID{{random}}",
+            "mothers_maiden_name" : "ACCOUNT005MotherMaidenName{{random}}",
+            "name" : "ACCOUNT005Name{{random}}",
+            "status": "ACTIVE",
+            "account_identifier_key" : "physical"            
+        }
+    ],   
+	"close_deals":[
+		{
+			"name" : "ACCOUNTDEAL005Name{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",
+			"accounts" : [					
+				{
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT005Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],					
+			"deal_submit" : true
+		}					
+	],
+	"deals": [
+		{
+			"name" : "ACCOUNTDEAL005Name2{{random}}",
+			"product": "Test",
+			"starts_on" : "{{today}}",
+			"ends_on" : "{{oneYearFromToday}}",
+			"business_segment" : "Commercial development",
+			"processing_units" : [				
+				"Bangalore CPU",
+				"Mumbai HO"
+			],
+			"country": "India",
+			"timezone" : "Asia/Kolkata (+05:30)",								
+			"deal_submit" : true
+		}
+	],
+	"edit_deals":[
+		{
+			"name" : "ACCOUNTDEAL005Name2{{random}}",			
+			"accounts" : [					
+				{
+					"account_action" : "ADD",
+					"account_country" : "India",
+					"account_currency" : "INR",
+					"account_search_parameter" : "Account No.",
+					"account_identifier_key" : "Physical",
+					"account_search_input" : "ACCOUNT005Account{{random}}",
+					"account_balance_check" : true	  
+				}
+			],
+			"deal_submit" : true
+		}
+	]
+}

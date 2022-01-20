@@ -1,0 +1,14 @@
+{
+"page" : "IncomeBookingFeePage",
+    "locators" : [ 
+        {	
+        	"label-TXNMaker" : "//label[@for='TRANSACTIONMAKER']",
+        	"label-TXNChecker" : "//label[@for='TRANSACTIONCHECKER']",
+        	"input-FilterText" : "//input[@ref='eFloatingFilterText']",
+        	"column-DealName" : "//div[@col-id='dealName']",
+        	"column-InstructionName" : "//div[@col-id='instructionName']",
+        	"column-InvoiceNumber" : "//div[@col-id='invoiceNumber']",
+        	"column-InvoiceDate" : "//div[@col-id='invoiceDate.utc']"           
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+	"page" : "TransactionMakerPage",
+ 	"locators" : [ 
+        {
+        	"input-FilerDealID" : "//div[contains(@ref, 'eFloatingFilterBody') and contains(@aria-colindex, '3')]",
+        	"checkbox-TransactionCheckbox" : "undefined",
+        	"table-TransactionBody" : "//div[@ref='eBodyViewport']",
+        	"button-TransactionDealID" : "//div[@col-id='refId']",
+        	"label-TransactionNoResults" : "//div[@ref='eoverlayWrapper']",
+        	"label-TransactionRecordsCount" : "//div[contains(@class, 'records-count')]",
+        	"button-TransactionDelete" : "//button[contains(text(), 'Delete')]",
+        	"button-TransactionSubmit" : "//button[contains(text(), 'Submit')]",
+        	"button-TransactionSubmitOK" : "//button[contains(text(), 'OK')]",
+        	"link-TransactionBulkUpload" : "//div[contains(@class, 'bulk_upload')]",
+        	"button-AddNewTransaction" : "//div[contains(text(), 'Add New')]",
+        	"select-TransactionDealID" : "//ui-autocomplete[@formcontrolname='refId']",
+        	"select-TransactionSourceAccountNumber" : "//ui-autocomplete[@formcontrolname='sourceAccountNumber']"
+        	
+        	
+        }
+	]
+}

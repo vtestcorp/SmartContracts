@@ -1,0 +1,14 @@
+{
+"page" : "PartySummaryPage",
+    "locators" : [ 
+        {
+        "select-SearchType" : "sel-generic-searchBar-searchSelect-v1",
+        "input-SearchParameter" : "sel-generic-searchBar-searchInput-v1",
+        "button-Search" : "btn-generic-searchBar-search-v1",
+        "button-SearchClearFiler" : "btn-generic-searchBar-reset-v1",
+        "table-SearchResult" : "btn-generic-grid-row-v1",
+        "label-Title" : "swal2-title",
+        "button-OK" : "//button[contains(text(), 'OK')]"       
+        }
+	]
+}
